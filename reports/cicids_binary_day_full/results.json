@@ -1,0 +1,110 @@
+{
+  "dataset": "CIC-IDS2017 MachineLearningCVE",
+  "task": "binary benign-vs-attack classification",
+  "feature_columns": [
+    "Destination Port",
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Length of Fwd Packets",
+    "Fwd Packet Length Max",
+    "Fwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Fwd Packet Length Std",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Fwd IAT Total",
+    "Fwd IAT Mean",
+    "Fwd IAT Std",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Fwd PSH Flags",
+    "Fwd URG Flags",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "RST Flag Count",
+    "PSH Flag Count",
+    "ACK Flag Count",
+    "URG Flag Count",
+    "CWE Flag Count",
+    "ECE Flag Count",
+    "Average Packet Size"
+  ],
+  "feature_count": 26,
+  "history_length": 32,
+  "train_rows_used": 300000,
+  "validation_rows_evaluated": 692703,
+  "calibration_rows_evaluated": 458968,
+  "test_rows_evaluated": 703245,
+  "device": "cpu",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.0074867483731752595,
+      "validation": {
+        "rows": 692703,
+        "positive_rate": 0.36476239562034607,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mcc": 0.0,
+        "average_precision": 0.7769321130906177,
+        "auroc": 0.8927594667743912,
+        "threshold": 0.5
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 8.239039125452581e-05,
+      "validation": {
+        "rows": 692703,
+        "positive_rate": 0.36476239562034607,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mcc": 0.0,
+        "average_precision": 0.7853482078525444,
+        "auroc": 0.8985942371101715,
+        "threshold": 0.5
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 2.5273984101038337e-05,
+      "validation": {
+        "rows": 692703,
+        "positive_rate": 0.36476239562034607,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mcc": 0.0,
+        "average_precision": 0.7874840957411875,
+        "auroc": 0.9000652598979398,
+        "threshold": 0.5
+      }
+    }
+  ],
+  "test_metrics": {
+    "rows": 703245,
+    "positive_rate": 0.4108425974845886,
+    "precision": 0.7152675280244026,
+    "recall": 0.9812199098029579,
+    "f1": 0.8273975081500247,
+    "mcc": 0.7031898588927945,
+    "average_precision": 0.8533398547795985,
+    "auroc": 0.9241219024972307,
+    "threshold": 1.500282724009594e-05
+  },
+  "calibrated_threshold": 1.500282724009594e-05,
+  "threshold_calibration_metrics": {
+    "rows": 458968,
+    "positive_rate": 0.004828223492950201,
+    "precision": 0.013111650044743019,
+    "recall": 0.9124548736462094,
+    "f1": 0.025851818704852012,
+    "mcc": 0.08500696847827446,
+    "average_precision": 0.008005230670518277,
+    "auroc": 0.7195088539899492,
+    "threshold": 1.500282724009594e-05
+  },
+  "directionality_caveat": "CICFlowMeter flow aggregates may summarize both directions; this is a binary flow-based prototype, not proof of strict one-way deployment validity."
+}

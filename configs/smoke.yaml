@@ -1,0 +1,23 @@
+project: directionlab
+version: 0.1.0
+seed: 7
+observation:
+  history_length: 32
+  history_scope: declared_collection_stream
+  payload_features: false
+  reverse_flow_features: false
+model:
+  hidden_dim: 64
+  dilations: [1, 2, 4, 8]
+  dropout: 0.1
+  binary_head: true
+  multiclass_classes: 2
+split:
+  strategy: chronological
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  calibration_fraction: 0.05
+  test_fraction: 0.10
+status:
+  dataset: not_selected
+  measured_results: false

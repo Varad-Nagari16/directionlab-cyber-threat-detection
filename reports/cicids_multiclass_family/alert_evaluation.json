@@ -1,0 +1,75 @@
+{
+  "rows_evaluated": 283076,
+  "confusion_matrix": [
+    [
+      224743,
+      15,
+      112,
+      674,
+      1766
+    ],
+    [
+      7,
+      12795,
+      0,
+      0,
+      1
+    ],
+    [
+      7,
+      4,
+      15875,
+      0,
+      7
+    ],
+    [
+      59,
+      0,
+      0,
+      138,
+      0
+    ],
+    [
+      46,
+      0,
+      2,
+      0,
+      26825
+    ]
+  ],
+  "per_class": {
+    "BENIGN": {
+      "precision": 0.9994707865268476,
+      "recall": 0.9887070520434649,
+      "f1-score": 0.9940597825606186,
+      "support": 227310.0
+    },
+    "DDoS": {
+      "precision": 0.9985172467613548,
+      "recall": 0.9993751464500508,
+      "f1-score": 0.9989460124136316,
+      "support": 12803.0
+    },
+    "PortScan": {
+      "precision": 0.9928700981925074,
+      "recall": 0.9988674259107784,
+      "f1-score": 0.9958597327645693,
+      "support": 15893.0
+    },
+    "Bot": {
+      "precision": 0.16995073891625614,
+      "recall": 0.700507614213198,
+      "f1-score": 0.27353815659068387,
+      "support": 197.0
+    },
+    "OTHER_ATTACK": {
+      "precision": 0.9379698590859821,
+      "recall": 0.9982138205633908,
+      "f1-score": 0.9671546005191809,
+      "support": 26873.0
+    }
+  },
+  "macro_f1": 0.8459116569697368,
+  "weighted_f1": 0.9913262385374018,
+  "note": "This evaluates only rows written to the JSONL file; random family-split results are not temporal generalization results."
+}

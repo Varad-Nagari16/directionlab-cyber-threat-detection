@@ -1,0 +1,20 @@
+{
+  "selected_on": "calibration",
+  "calibration": {
+    "threshold": 0.6228844807147997,
+    "precision": 0.27336860670194,
+    "recall": 0.7868020304568528,
+    "f1": 0.40575916230366493,
+    "predicted_bot": 567,
+    "actual_bot": 197
+  },
+  "test": {
+    "threshold": 0.6228844807147997,
+    "precision": 0.23893805309734514,
+    "recall": 0.6852791878172588,
+    "f1": 0.3543307086614173,
+    "predicted_bot": 565,
+    "actual_bot": 197
+  },
+  "warning": "The test result is for reporting only; do not retune using test data."
+}

@@ -1,0 +1,31 @@
+{
+  "rows_evaluated": 100000,
+  "confusion_matrix": {
+    "true_positive": 40825,
+    "true_negative": 38144,
+    "false_positive": 662,
+    "false_negative": 20369
+  },
+  "precision": 0.9840431942536216,
+  "recall": 0.667140569336863,
+  "f1": 0.7951811922361488,
+  "alert_rate": 0.41487,
+  "actual_attack_rate": 0.61194,
+  "families": {
+    "BENIGN": {
+      "rows": 38806,
+      "predicted_attack": 662,
+      "correct_attack": 0,
+      "missed_attack": 0,
+      "false_alert": 662
+    },
+    "DDoS": {
+      "rows": 61194,
+      "predicted_attack": 40825,
+      "correct_attack": 40825,
+      "missed_attack": 20369,
+      "false_alert": 0
+    }
+  },
+  "note": "Metrics apply only to the rows written to the JSONL file; reference labels are unavailable in real deployment."
+}

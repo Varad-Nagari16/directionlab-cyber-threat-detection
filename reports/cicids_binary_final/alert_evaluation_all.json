@@ -1,0 +1,45 @@
+{
+  "rows_evaluated": 703245,
+  "confusion_matrix": {
+    "true_positive": 80996,
+    "true_negative": 408009,
+    "false_positive": 6313,
+    "false_negative": 207927
+  },
+  "precision": 0.9276935940166535,
+  "recall": 0.2803376678215303,
+  "f1": 0.43056412001105704,
+  "alert_rate": 0.12415161145831112,
+  "actual_attack_rate": 0.4108425939750727,
+  "families": {
+    "BENIGN": {
+      "rows": 414322,
+      "predicted_attack": 6313,
+      "correct_attack": 0,
+      "missed_attack": 0,
+      "false_alert": 6313
+    },
+    "Bot": {
+      "rows": 1966,
+      "predicted_attack": 0,
+      "correct_attack": 0,
+      "missed_attack": 1966,
+      "false_alert": 0
+    },
+    "DDoS": {
+      "rows": 128027,
+      "predicted_attack": 80851,
+      "correct_attack": 80851,
+      "missed_attack": 47176,
+      "false_alert": 0
+    },
+    "PortScan": {
+      "rows": 158930,
+      "predicted_attack": 145,
+      "correct_attack": 145,
+      "missed_attack": 158785,
+      "false_alert": 0
+    }
+  },
+  "note": "Metrics apply only to the rows written to the JSONL file; reference labels are unavailable in real deployment."
+}

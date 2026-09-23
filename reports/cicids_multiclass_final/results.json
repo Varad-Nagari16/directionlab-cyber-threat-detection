@@ -1,0 +1,537 @@
+{
+  "dataset": "CIC-IDS2017 MachineLearningCVE",
+  "classes": [
+    "BENIGN",
+    "DDoS",
+    "PortScan",
+    "Bot",
+    "OTHER_ATTACK"
+  ],
+  "class_mapping": "BENIGN, DDoS, PortScan, Bot, and all remaining non-benign labels mapped to OTHER_ATTACK",
+  "feature_columns": [
+    "Destination Port",
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Length of Fwd Packets",
+    "Fwd Packet Length Max",
+    "Fwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Fwd Packet Length Std",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Fwd IAT Total",
+    "Fwd IAT Mean",
+    "Fwd IAT Std",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Fwd PSH Flags",
+    "Fwd URG Flags",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "RST Flag Count",
+    "PSH Flag Count",
+    "ACK Flag Count",
+    "URG Flag Count",
+    "CWE Flag Count",
+    "ECE Flag Count",
+    "Average Packet Size"
+  ],
+  "feature_count": 26,
+  "history_length": 32,
+  "train_rows_used": 1668530,
+  "calibration_rows_evaluated": 458968,
+  "test_rows_evaluated": 703245,
+  "class_counts_train": {
+    "BENIGN": 1402023,
+    "DDoS": 0,
+    "PortScan": 0,
+    "Bot": 0,
+    "OTHER_ATTACK": 266507
+  },
+  "class_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    1.2521471977233887
+  ],
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.02358182199099047,
+      "calibration": {
+        "rows": 458968,
+        "accuracy": 0.9926378309598927,
+        "macro_f1": 0.4987438406867608,
+        "weighted_f1": 0.9915006232032797,
+        "mcc": -0.0022684674477274356,
+        "confusion_matrix": [
+          [
+            455587,
+            0,
+            0,
+            0,
+            1165
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2214,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9951638375626091,
+            "recall": 0.9974493817213718,
+            "f1-score": 0.9963052988727826,
+            "support": 456752.0
+          },
+          "DDoS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "PortScan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Bot": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "OTHER_ATTACK": {
+            "precision": 0.001713796058269066,
+            "recall": 0.0009025270758122744,
+            "f1-score": 0.0011823825007389892,
+            "support": 2216.0
+          }
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.007077642813807593,
+      "calibration": {
+        "rows": 458968,
+        "accuracy": 0.990892611249586,
+        "macro_f1": 0.5017468240153846,
+        "weighted_f1": 0.9906581245125435,
+        "mcc": 0.003510691527297673,
+        "confusion_matrix": [
+          [
+            454771,
+            0,
+            0,
+            0,
+            1981
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2199,
+            0,
+            0,
+            0,
+            17
+          ]
+        ],
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9951878679125544,
+            "recall": 0.9956628542403755,
+            "f1-score": 0.9954253044142529,
+            "support": 456752.0
+          },
+          "DDoS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "PortScan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Bot": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "OTHER_ATTACK": {
+            "precision": 0.00850850850850851,
+            "recall": 0.007671480144404332,
+            "f1-score": 0.008068343616516375,
+            "support": 2216.0
+          }
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.005763969864007667,
+      "calibration": {
+        "rows": 458968,
+        "accuracy": 0.9900472364086386,
+        "macro_f1": 0.500112539696375,
+        "weighted_f1": 0.9902197577378327,
+        "mcc": 0.00023132370603532146,
+        "confusion_matrix": [
+          [
+            454388,
+            0,
+            0,
+            0,
+            2364
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2204,
+            0,
+            0,
+            0,
+            12
+          ]
+        ],
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9951729333847286,
+            "recall": 0.994824324797702,
+            "f1-score": 0.9949985985565132,
+            "support": 456752.0
+          },
+          "DDoS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "PortScan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Bot": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "OTHER_ATTACK": {
+            "precision": 0.005050505050505051,
+            "recall": 0.005415162454873646,
+            "f1-score": 0.005226480836236934,
+            "support": 2216.0
+          }
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.004688629490219969,
+      "calibration": {
+        "rows": 458968,
+        "accuracy": 0.9921933555280542,
+        "macro_f1": 0.5027406458559648,
+        "weighted_f1": 0.9913173193309606,
+        "mcc": 0.005832123328980931,
+        "confusion_matrix": [
+          [
+            455368,
+            0,
+            0,
+            0,
+            1384
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2199,
+            0,
+            0,
+            0,
+            17
+          ]
+        ],
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9951941464310144,
+            "recall": 0.9969699092724279,
+            "f1-score": 0.9960812364174867,
+            "support": 456752.0
+          },
+          "DDoS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "PortScan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Bot": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "OTHER_ATTACK": {
+            "precision": 0.012134189864382585,
+            "recall": 0.007671480144404332,
+            "f1-score": 0.009400055294442908,
+            "support": 2216.0
+          }
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.004168823326644548,
+      "calibration": {
+        "rows": 458968,
+        "accuracy": 0.9932958289031043,
+        "macro_f1": 0.5034646105753436,
+        "weighted_f1": 0.9918742342831721,
+        "mcc": 0.008337161489773154,
+        "confusion_matrix": [
+          [
+            455875,
+            0,
+            0,
+            0,
+            877
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2200,
+            0,
+            0,
+            0,
+            16
+          ]
+        ],
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9951972930197021,
+            "recall": 0.9980799208323117,
+            "f1-score": 0.9966365225337687,
+            "support": 456752.0
+          },
+          "DDoS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "PortScan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Bot": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "OTHER_ATTACK": {
+            "precision": 0.01791713325867861,
+            "recall": 0.007220216606498195,
+            "f1-score": 0.010292698616918623,
+            "support": 2216.0
+          }
+        }
+      }
+    }
+  ],
+  "test_metrics": {
+    "rows": 703245,
+    "accuracy": 0.587689923142006,
+    "macro_f1": 0.16315630005615664,
+    "weighted_f1": 0.48062371258854975,
+    "mcc": 0.22670183686318893,
+    "confusion_matrix": [
+      [
+        413290,
+        0,
+        0,
+        0,
+        1032
+      ],
+      [
+        24839,
+        0,
+        0,
+        0,
+        103188
+      ],
+      [
+        158820,
+        0,
+        0,
+        0,
+        110
+      ],
+      [
+        1966,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class": {
+      "BENIGN": {
+        "precision": 0.6900645333645008,
+        "recall": 0.997509183678395,
+        "f1-score": 0.8157815002807832,
+        "support": 414322.0
+      },
+      "DDoS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 128027.0
+      },
+      "PortScan": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 158930.0
+      },
+      "Bot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1966.0
+      },
+      "OTHER_ATTACK": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      }
+    }
+  },
+  "directionality_caveat": "CICFlowMeter flow aggregates may summarize both directions; this is a multiclass flow-based prototype, not proof of strict one-way deployment validity."
+}

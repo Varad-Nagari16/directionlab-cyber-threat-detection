@@ -1,0 +1,58 @@
+{
+  "dataset": "UGR16v2 feature mirror",
+  "task": "blacklist-volume severity forecasting",
+  "target": "log1p(labelblacklist_count)",
+  "dataset_limitations": "One-minute aggregate feature data; all rows have nonzero blacklist counts, so binary attack detection is invalid.",
+  "feature_count": 134,
+  "history_length": 32,
+  "train_rows_used": 30000,
+  "validation_rows": 19653,
+  "test_rows": 43200,
+  "device": "cpu",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 1.1496876601950596,
+      "validation": {
+        "mae_log1p": 0.38380077481269836,
+        "rmse_log1p": 0.4928628206253052,
+        "baseline_rmse_log1p": 0.515085756778717,
+        "spearman": 0.41931079295998597,
+        "mean_true_log1p": 5.5350565910339355,
+        "mean_pred_log1p": 5.643779277801514
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.14426327509395145,
+      "validation": {
+        "mae_log1p": 0.37278133630752563,
+        "rmse_log1p": 0.4795498251914978,
+        "baseline_rmse_log1p": 0.515085756778717,
+        "spearman": 0.43781221272595794,
+        "mean_true_log1p": 5.5350565910339355,
+        "mean_pred_log1p": 5.617981433868408
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.13686262462603843,
+      "validation": {
+        "mae_log1p": 0.36829885840415955,
+        "rmse_log1p": 0.4750518798828125,
+        "baseline_rmse_log1p": 0.515085756778717,
+        "spearman": 0.4369536114221052,
+        "mean_true_log1p": 5.5350565910339355,
+        "mean_pred_log1p": 5.598638534545898
+      }
+    }
+  ],
+  "test_metrics": {
+    "mae_log1p": 0.5802358984947205,
+    "rmse_log1p": 0.7627137303352356,
+    "baseline_rmse_log1p": 0.6781615614891052,
+    "spearman": 0.08029729717686034,
+    "mean_true_log1p": 5.709165096282959,
+    "mean_pred_log1p": 5.38759183883667
+  }
+}
