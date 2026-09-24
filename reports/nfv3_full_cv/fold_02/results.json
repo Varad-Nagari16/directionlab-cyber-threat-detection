@@ -1,0 +1,114 @@
+{
+  "dataset": "NetFlow v3 NF-UNSW-NB15 direction-masked experiment",
+  "task": "binary benign-vs-attack classification",
+  "feature_columns": [
+    "PROTOCOL",
+    "L7_PROTO",
+    "FLOW_DURATION_MILLISECONDS",
+    "MIN_TTL",
+    "MAX_TTL",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES",
+    "TCP_WIN_MAX_IN",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_ID",
+    "DNS_QUERY_TYPE",
+    "DNS_TTL_ANSWER",
+    "FTP_COMMAND_RET_CODE",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "FLOW_START_MILLISECONDS",
+    "FLOW_END_MILLISECONDS"
+  ],
+  "feature_count": 29,
+  "history_length": 32,
+  "train_rows_used": 300000,
+  "validation_rows_evaluated": 49970,
+  "calibration_rows_evaluated": 49970,
+  "test_rows_evaluated": 467132,
+  "device": "cpu",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.03834000080859657,
+      "validation": {
+        "rows": 49970,
+        "positive_rate": 0.6768060922622681,
+        "precision": 0.9982836174242424,
+        "recall": 0.9974571259609698,
+        "f1": 0.9978702005561143,
+        "mcc": 0.9934166740578453,
+        "average_precision": 0.9980053039167374,
+        "auroc": 0.9986118752895039,
+        "threshold": 0.5
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.005740273321067689,
+      "validation": {
+        "rows": 49970,
+        "positive_rate": 0.6768060922622681,
+        "precision": 0.9981389028389117,
+        "recall": 0.9990538143110586,
+        "f1": 0.9985961490150878,
+        "mcc": 0.9956531510283951,
+        "average_precision": 0.9989912970225269,
+        "auroc": 0.9991056668613474,
+        "threshold": 0.5
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.0023447996511852367,
+      "validation": {
+        "rows": 49970,
+        "positive_rate": 0.6768060922622681,
+        "precision": 0.9980510276399717,
+        "recall": 0.9993494973388527,
+        "f1": 0.9986998404349625,
+        "mcc": 0.9959736896698533,
+        "average_precision": 0.9997368355811983,
+        "auroc": 0.9995488398789438,
+        "threshold": 0.5
+      }
+    }
+  ],
+  "test_metrics": {
+    "rows": 467132,
+    "positive_rate": 0.05834539234638214,
+    "precision": 0.9947076428936419,
+    "recall": 0.9999266189689965,
+    "f1": 0.9973103031855525,
+    "mcc": 0.9971470357007545,
+    "average_precision": 0.9999981286052062,
+    "auroc": 0.9999998828911633,
+    "threshold": 0.002342678839340806
+  },
+  "calibrated_threshold": 0.002342678839340806,
+  "target_fpr": 0.01,
+  "threshold_calibration_metrics": {
+    "rows": 49970,
+    "positive_rate": 0.6768060922622681,
+    "precision": 0.9952317880794702,
+    "recall": 0.9997930218805441,
+    "f1": 0.9975071907957814,
+    "mcc": 0.9922749168459216,
+    "average_precision": 0.9997368355811983,
+    "auroc": 0.9995488398789438,
+    "threshold": 0.002342678839340806
+  },
+  "directionality_caveat": "The source NetFlow v3 archive contains both-direction fields. This experiment excludes reverse-direction fields before modeling but is direction-masked rather than proof of physical one-way collection."
+}

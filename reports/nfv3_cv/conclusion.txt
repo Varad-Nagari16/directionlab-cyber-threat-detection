@@ -1,0 +1,24 @@
+Cross-host validation conclusion
+================================
+
+The direction-masked detector was evaluated across 12 ordered host-held-out
+folds using the NF-UNSW-NB15 NetFlow v3 dataset.
+
+Mean AUROC was 0.9957 with a standard deviation of 0.0064. Mean average
+precision was 0.9970 with a standard deviation of 0.0051. Mean recall was
+0.9988 with a standard deviation of 0.0026, indicating strong ranking and
+attack-retrieval performance across unseen source hosts.
+
+Precision averaged 0.8662, while MCC averaged 0.5640 with a standard
+deviation of 0.3024. The larger variability in MCC indicates that the
+operating point is less stable than the ranking metrics.
+
+The calibrated threshold varied from 0.00008 to 0.99383 across folds. This
+large variation indicates score-distribution shift between source hosts.
+Therefore, a single globally fixed threshold cannot yet be claimed to
+maintain the requested false-positive target on unseen hosts.
+
+The result supports the feasibility of direction-preserving threat ranking,
+but not deployment-ready threshold transfer. Further evaluation must report
+benign false alerts, false alerts per hour, and threshold-transfer behavior
+under realistic benign-dominant traffic prevalence.

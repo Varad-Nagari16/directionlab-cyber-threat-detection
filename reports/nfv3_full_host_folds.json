@@ -1,0 +1,309 @@
+{
+  "host_count": 40,
+  "attack_host_count": 4,
+  "benign_group_count": 10,
+  "benign_groups": [
+    "benign_0",
+    "benign_1",
+    "benign_2",
+    "benign_3",
+    "benign_4",
+    "benign_5",
+    "benign_6",
+    "benign_7",
+    "benign_8",
+    "benign_9"
+  ],
+  "fold_count": 12,
+  "folds": [
+    {
+      "train_attack_hosts": [
+        "4b170f7fbb449ba2",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "31f230da98b9f5fd",
+      "test_attack_host": "491573faf5dd68e8",
+      "train_benign_groups": [
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_0"
+      ],
+      "test_benign_groups": [
+        "benign_1"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "31f230da98b9f5fd",
+      "test_attack_host": "4b170f7fbb449ba2",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_1"
+      ],
+      "test_benign_groups": [
+        "benign_2"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "31f230da98b9f5fd",
+      "test_attack_host": "f6612d76e7b8ff02",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_2"
+      ],
+      "test_benign_groups": [
+        "benign_3"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "4b170f7fbb449ba2",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "491573faf5dd68e8",
+      "test_attack_host": "31f230da98b9f5fd",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_2",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_3"
+      ],
+      "test_benign_groups": [
+        "benign_4"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "491573faf5dd68e8",
+      "test_attack_host": "4b170f7fbb449ba2",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_2",
+        "benign_3",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_4"
+      ],
+      "test_benign_groups": [
+        "benign_5"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "491573faf5dd68e8",
+      "test_attack_host": "f6612d76e7b8ff02",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_5"
+      ],
+      "test_benign_groups": [
+        "benign_6"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "4b170f7fbb449ba2",
+      "test_attack_host": "31f230da98b9f5fd",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_6"
+      ],
+      "test_benign_groups": [
+        "benign_7"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "4b170f7fbb449ba2",
+      "test_attack_host": "491573faf5dd68e8",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_7"
+      ],
+      "test_benign_groups": [
+        "benign_8"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "491573faf5dd68e8"
+      ],
+      "calibration_attack_host": "4b170f7fbb449ba2",
+      "test_attack_host": "f6612d76e7b8ff02",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_1",
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7"
+      ],
+      "calibration_benign_groups": [
+        "benign_8"
+      ],
+      "test_benign_groups": [
+        "benign_9"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "f6612d76e7b8ff02",
+      "test_attack_host": "31f230da98b9f5fd",
+      "train_benign_groups": [
+        "benign_1",
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8"
+      ],
+      "calibration_benign_groups": [
+        "benign_9"
+      ],
+      "test_benign_groups": [
+        "benign_0"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "f6612d76e7b8ff02",
+      "test_attack_host": "491573faf5dd68e8",
+      "train_benign_groups": [
+        "benign_2",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_0"
+      ],
+      "test_benign_groups": [
+        "benign_1"
+      ]
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "491573faf5dd68e8"
+      ],
+      "calibration_attack_host": "f6612d76e7b8ff02",
+      "test_attack_host": "4b170f7fbb449ba2",
+      "train_benign_groups": [
+        "benign_0",
+        "benign_3",
+        "benign_4",
+        "benign_5",
+        "benign_6",
+        "benign_7",
+        "benign_8",
+        "benign_9"
+      ],
+      "calibration_benign_groups": [
+        "benign_1"
+      ],
+      "test_benign_groups": [
+        "benign_2"
+      ]
+    }
+  ],
+  "note": "Each fold holds out both attack-bearing hosts and benign source-host groups; thresholds must be selected on calibration only."
+}

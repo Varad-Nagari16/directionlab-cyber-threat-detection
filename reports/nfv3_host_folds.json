@@ -1,0 +1,426 @@
+{
+  "host_count": 40,
+  "attack_host_count": 4,
+  "hosts": [
+    {
+      "host_id": "105ebe54ec137be8",
+      "rows": 224766,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "11c2e71801ddb149",
+      "rows": 479,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "12ca17b49af22894",
+      "rows": 1,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "13f37438194bd42b",
+      "rows": 431,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "184ee6b39a668266",
+      "rows": 390,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "1a36c066c13c189f",
+      "rows": 224942,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "20bdeda22142d0ab",
+      "rows": 215238,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "29250124dd5b77da",
+      "rows": 82,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "293cfa71a5eea97a",
+      "rows": 3848,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "31f230da98b9f5fd",
+      "rows": 33820,
+      "attacks": 33820,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "355a150fc98bcac5",
+      "rows": 446,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "3d4b49413a3d56be",
+      "rows": 51,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "43ed813f1880eb76",
+      "rows": 3940,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "491573faf5dd68e8",
+      "rows": 35176,
+      "attacks": 35176,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "4b170f7fbb449ba2",
+      "rows": 27255,
+      "attacks": 27255,
+      "source_partition": [
+        "calibration"
+      ]
+    },
+    {
+      "host_id": "4d7636131caeef64",
+      "rows": 225316,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "51a1e434f34b0cd1",
+      "rows": 224274,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "540796915c7a01d7",
+      "rows": 57,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "63bad5c22a0f9f8e",
+      "rows": 353,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "6bad914edde6d749",
+      "rows": 3580,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "75583df69a2bc42d",
+      "rows": 420,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "7868574c3dab5506",
+      "rows": 214165,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "7d3f691c3896bb32",
+      "rows": 642,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "8cf736071557d6e4",
+      "rows": 223608,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "915d6415ae88d530",
+      "rows": 401,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "92cd0f7d1f45275d",
+      "rows": 413,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "98ee4a29ee149353",
+      "rows": 26,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "9908fc657fc97c7c",
+      "rows": 339,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "9f63cdd83b024da7",
+      "rows": 58,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "a089d2245b43b6c0",
+      "rows": 350,
+      "attacks": 0,
+      "source_partition": [
+        "test"
+      ]
+    },
+    {
+      "host_id": "a6aae0a3aa400dc6",
+      "rows": 215681,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "ae7c18162b41d23c",
+      "rows": 3833,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "b7fb80ad92b15fff",
+      "rows": 214339,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "bf1769a150e7a736",
+      "rows": 58,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "c5128ca1f5c92155",
+      "rows": 11317,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "df1602e1587fd65f",
+      "rows": 222835,
+      "attacks": 0,
+      "source_partition": [
+        "calibration"
+      ]
+    },
+    {
+      "host_id": "e1b8c905ee927148",
+      "rows": 354,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "e8f1b918064b9207",
+      "rows": 665,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "e9d0228d75d2d2d8",
+      "rows": 33,
+      "attacks": 0,
+      "source_partition": [
+        "train"
+      ]
+    },
+    {
+      "host_id": "f6612d76e7b8ff02",
+      "rows": 31442,
+      "attacks": 31442,
+      "source_partition": [
+        "train"
+      ]
+    }
+  ],
+  "fold_count": 12,
+  "folds": [
+    {
+      "train_attack_hosts": [
+        "4b170f7fbb449ba2",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "31f230da98b9f5fd",
+      "test_attack_host": "491573faf5dd68e8"
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "31f230da98b9f5fd",
+      "test_attack_host": "4b170f7fbb449ba2"
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "31f230da98b9f5fd",
+      "test_attack_host": "f6612d76e7b8ff02"
+    },
+    {
+      "train_attack_hosts": [
+        "4b170f7fbb449ba2",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "491573faf5dd68e8",
+      "test_attack_host": "31f230da98b9f5fd"
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "491573faf5dd68e8",
+      "test_attack_host": "4b170f7fbb449ba2"
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "491573faf5dd68e8",
+      "test_attack_host": "f6612d76e7b8ff02"
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "4b170f7fbb449ba2",
+      "test_attack_host": "31f230da98b9f5fd"
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "f6612d76e7b8ff02"
+      ],
+      "calibration_attack_host": "4b170f7fbb449ba2",
+      "test_attack_host": "491573faf5dd68e8"
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "491573faf5dd68e8"
+      ],
+      "calibration_attack_host": "4b170f7fbb449ba2",
+      "test_attack_host": "f6612d76e7b8ff02"
+    },
+    {
+      "train_attack_hosts": [
+        "491573faf5dd68e8",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "f6612d76e7b8ff02",
+      "test_attack_host": "31f230da98b9f5fd"
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "4b170f7fbb449ba2"
+      ],
+      "calibration_attack_host": "f6612d76e7b8ff02",
+      "test_attack_host": "491573faf5dd68e8"
+    },
+    {
+      "train_attack_hosts": [
+        "31f230da98b9f5fd",
+        "491573faf5dd68e8"
+      ],
+      "calibration_attack_host": "f6612d76e7b8ff02",
+      "test_attack_host": "4b170f7fbb449ba2"
+    }
+  ],
+  "note": "Fold metrics must be computed with fixed thresholds selected on calibration hosts; do not tune on test hosts."
+}
