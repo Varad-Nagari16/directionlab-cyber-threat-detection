@@ -22,7 +22,7 @@ def load_split(path: Path, feature_columns: list[str] | None = None) -> tuple[np
     frame = pd.read_csv(path, low_memory=False)
     if "label_binary" not in frame:
         raise ValueError(f"Missing label_binary in {path}")
-    excluded = {"timestamp", "Label", "label_binary", "source_file", "Protocol"}
+    excluded = {"timestamp", "Label", "label_binary", "source_file", "source_host_group", "source_host_id", "Protocol", "Attack"}
     if feature_columns is None:
         feature_columns = [column for column in frame.columns if column not in excluded]
     missing = [column for column in feature_columns if column not in frame]
@@ -174,7 +174,7 @@ def main() -> None:
     calibrated_threshold, threshold_calibrated_metrics = calibrate_threshold(model, threshold_loader, device, args.target_fpr)
     test_metrics = evaluate(model, test_loader, device, calibrated_threshold)
     results = {
-        "dataset": "CIC-IDS2017 MachineLearningCVE",
+        "dataset": "NetFlow v3 NF-UNSW-NB15 direction-masked experiment",
         "task": "binary benign-vs-attack classification",
         "feature_columns": feature_columns,
         "feature_count": len(feature_columns),
@@ -189,7 +189,7 @@ def main() -> None:
         "calibrated_threshold": calibrated_threshold,
         "target_fpr": args.target_fpr,
         "threshold_calibration_metrics": threshold_calibrated_metrics,
-        "directionality_caveat": "CICFlowMeter flow aggregates may summarize both directions; this is a binary flow-based prototype, not proof of strict one-way deployment validity.",
+        "directionality_caveat": "The source NetFlow v3 archive contains both-direction fields. This experiment excludes reverse-direction fields before modeling but is direction-masked rather than proof of physical one-way collection.",
     }
     (output_dir / "results.json").write_text(json.dumps(results, indent=2) + "\n")
     torch.save({"model": model.state_dict(), "config": vars(args), "feature_columns": feature_columns, "scaler_mean": scaler.mean_.tolist(), "scaler_scale": scaler.scale_.tolist(), "results": results}, output_dir / "model.pt")
