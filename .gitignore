@@ -27,3 +27,9 @@ reports/*/alerts*.jsonl
 .env
 *.pem
 *.key
+
+# Large datasets and archives
+*.zip
+data/raw/
+data/processed/
+src/directionlab/*.zip
