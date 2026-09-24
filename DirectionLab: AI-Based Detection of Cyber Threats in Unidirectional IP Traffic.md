@@ -1,4 +1,4 @@
-DirectionLab-AI-Based-Detection-of-Cyber-Threats-in-Unidirectional-IP-Traffic.md
+DirectionLab: AI-Based Detection of Cyber Threats in Unidirectional IP Traffic.md
 
 This repository contains the first implementation milestone for a direction-preserving, payload-independent, temporally causal network-threat detector.
 
