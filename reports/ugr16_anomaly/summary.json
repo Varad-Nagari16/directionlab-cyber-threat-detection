@@ -1,0 +1,11 @@
+{
+  "dataset": "UGR16v2 feature mirror",
+  "task": "unsupervised anomaly detection",
+  "rows_scored": 98262,
+  "feature_count": 134,
+  "anomalies_flagged": 983,
+  "anomaly_rate": 0.010003867212147117,
+  "note": "Anomaly flags are not confirmed attack labels.",
+  "predictions": "reports\\ugr16_anomaly\\predictions.csv",
+  "model": "reports\\ugr16_anomaly\\model.joblib"
+}

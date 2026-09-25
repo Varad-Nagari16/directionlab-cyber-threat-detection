@@ -1,0 +1,62 @@
+{
+  "created_at_utc": "2026-09-25T14:29:39.759418+00:00",
+  "model_path": "reports\\cic_ids2017_baseline\\model.joblib",
+  "input_path": "data\\raw\\CIC-IDS2017\\MachineLearningCVE\\Tuesday-WorkingHours.pcap_ISCX.csv",
+  "dataset_detected": "CICFlowMeter-compatible (CIC-IDS2017/2018-like)",
+  "evaluation_design": "Apply the saved model trained on the Wednesday random training split to a separate CIC-IDS2017 day. No refitting or threshold tuning on the target day.",
+  "rows_evaluated": 445909,
+  "feature_count": 77,
+  "extra_target_features_ignored": [],
+  "metrics": {
+    "accuracy": 0.96117817761023,
+    "precision_attack": 0.03178879310344827,
+    "recall_attack": 0.008529092880375858,
+    "f1_attack": 0.013449592522938394,
+    "roc_auc": 0.9484375671109184,
+    "false_positive_rate": 0.008318019598494703,
+    "false_negative_rate": 0.9914709071196242
+  },
+  "confusion_matrix": {
+    "labels": [
+      "BENIGN",
+      "ATTACK"
+    ],
+    "true_negative": 428480,
+    "false_positive": 3594,
+    "false_negative": 13717,
+    "true_positive": 118
+  },
+  "classification_report": {
+    "BENIGN": {
+      "precision": 0.9689798890539737,
+      "recall": 0.9916819804015053,
+      "f1-score": 0.9801995033576546,
+      "support": 432074.0
+    },
+    "ATTACK": {
+      "precision": 0.03178879310344827,
+      "recall": 0.008529092880375858,
+      "f1-score": 0.013449592522938394,
+      "support": 13835.0
+    },
+    "accuracy": 0.96117817761023,
+    "macro avg": {
+      "precision": 0.500384341078711,
+      "recall": 0.5001055366409406,
+      "f1-score": 0.4968245479402965,
+      "support": 445909.0
+    },
+    "weighted avg": {
+      "precision": 0.9399021202435763,
+      "recall": 0.96117817761023,
+      "f1-score": 0.9502046276848193,
+      "support": 445909.0
+    }
+  },
+  "limitations": [
+    "This is cross-day evaluation within CIC-IDS2017, not cross-dataset validation.",
+    "Feature names and definitions must be compatible across the two days.",
+    "Dataset-specific collection artifacts may affect results.",
+    "The saved model was trained on a random subset of Wednesday; the other 20% of Wednesday was not used here."
+  ]
+}

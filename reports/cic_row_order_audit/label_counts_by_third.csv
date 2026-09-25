@@ -1,0 +1,67 @@
+file,third,label,rows
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,first_third,BENIGN,33591
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,first_third,DDoS,41658
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,middle_third,BENIGN,20106
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,middle_third,DDoS,55142
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,last_third,BENIGN,44021
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,last_third,DDoS,31227
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,first_third,BENIGN,87480
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,first_third,PortScan,8010
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,middle_third,BENIGN,2840
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,middle_third,PortScan,92649
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,last_third,BENIGN,37217
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,last_third,PortScan,58271
+Friday-WorkingHours-Morning.pcap_ISCX.csv,first_third,BENIGN,63618
+Friday-WorkingHours-Morning.pcap_ISCX.csv,first_third,Bot,60
+Friday-WorkingHours-Morning.pcap_ISCX.csv,middle_third,BENIGN,62248
+Friday-WorkingHours-Morning.pcap_ISCX.csv,middle_third,Bot,1430
+Friday-WorkingHours-Morning.pcap_ISCX.csv,last_third,BENIGN,63201
+Friday-WorkingHours-Morning.pcap_ISCX.csv,last_third,Bot,476
+Monday-WorkingHours.pcap_ISCX.csv,first_third,BENIGN,176640
+Monday-WorkingHours.pcap_ISCX.csv,middle_third,BENIGN,176639
+Monday-WorkingHours.pcap_ISCX.csv,last_third,BENIGN,176639
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,first_third,BENIGN,96183
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,first_third,Infiltration,18
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,middle_third,BENIGN,96188
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,middle_third,Infiltration,13
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,last_third,BENIGN,96195
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,last_third,Infiltration,5
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,first_third,BENIGN,55475
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,first_third,Web Attack � Brute Force,1314
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,first_third,Web Attack � Sql Injection,0
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,first_third,Web Attack � XSS,0
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,middle_third,BENIGN,55923
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,middle_third,Web Attack � Brute Force,193
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,middle_third,Web Attack � Sql Injection,21
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,middle_third,Web Attack � XSS,652
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,last_third,BENIGN,56788
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,last_third,Web Attack � Brute Force,0
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,last_third,Web Attack � Sql Injection,0
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,last_third,Web Attack � XSS,0
+Tuesday-WorkingHours.pcap_ISCX.csv,first_third,BENIGN,140716
+Tuesday-WorkingHours.pcap_ISCX.csv,first_third,FTP-Patator,7921
+Tuesday-WorkingHours.pcap_ISCX.csv,first_third,SSH-Patator,0
+Tuesday-WorkingHours.pcap_ISCX.csv,middle_third,BENIGN,145296
+Tuesday-WorkingHours.pcap_ISCX.csv,middle_third,FTP-Patator,17
+Tuesday-WorkingHours.pcap_ISCX.csv,middle_third,SSH-Patator,3323
+Tuesday-WorkingHours.pcap_ISCX.csv,last_third,BENIGN,146062
+Tuesday-WorkingHours.pcap_ISCX.csv,last_third,FTP-Patator,0
+Tuesday-WorkingHours.pcap_ISCX.csv,last_third,SSH-Patator,2574
+Wednesday-workingHours.pcap_ISCX.csv,first_third,BENIGN,71987
+Wednesday-workingHours.pcap_ISCX.csv,first_third,DoS GoldenEye,0
+Wednesday-workingHours.pcap_ISCX.csv,first_third,DoS Hulk,147620
+Wednesday-workingHours.pcap_ISCX.csv,first_third,DoS Slowhttptest,5499
+Wednesday-workingHours.pcap_ISCX.csv,first_third,DoS slowloris,5796
+Wednesday-workingHours.pcap_ISCX.csv,first_third,Heartbleed,0
+Wednesday-workingHours.pcap_ISCX.csv,middle_third,BENIGN,146324
+Wednesday-workingHours.pcap_ISCX.csv,middle_third,DoS GoldenEye,1124
+Wednesday-workingHours.pcap_ISCX.csv,middle_third,DoS Hulk,83453
+Wednesday-workingHours.pcap_ISCX.csv,middle_third,DoS Slowhttptest,0
+Wednesday-workingHours.pcap_ISCX.csv,middle_third,DoS slowloris,0
+Wednesday-workingHours.pcap_ISCX.csv,middle_third,Heartbleed,0
+Wednesday-workingHours.pcap_ISCX.csv,last_third,BENIGN,221720
+Wednesday-workingHours.pcap_ISCX.csv,last_third,DoS GoldenEye,9169
+Wednesday-workingHours.pcap_ISCX.csv,last_third,DoS Hulk,0
+Wednesday-workingHours.pcap_ISCX.csv,last_third,DoS Slowhttptest,0
+Wednesday-workingHours.pcap_ISCX.csv,last_third,DoS slowloris,0
+Wednesday-workingHours.pcap_ISCX.csv,last_third,Heartbleed,11

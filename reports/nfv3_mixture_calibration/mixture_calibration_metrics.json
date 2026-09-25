@@ -1,0 +1,19 @@
+{
+  "method": "two_component_logit_gmm_empirical_benign_tail",
+  "benign_quantile": 0.99,
+  "folds": 12,
+  "device": "cuda",
+  "mean_fpr": 0.3210532812854748,
+  "std_fpr": 0.4583480948689174,
+  "min_fpr": 0.0,
+  "max_fpr": 1.0,
+  "mean_false_alerts_per_hour": 73.43106040172752,
+  "std_false_alerts_per_hour": 117.36639655124272,
+  "min_false_alerts_per_hour": 0.0,
+  "max_false_alerts_per_hour": 321.0030058029016,
+  "mean_attack_recall": 0.3236169947431902,
+  "std_attack_recall": 0.4617152795223701,
+  "min_attack_recall": 0.0,
+  "max_attack_recall": 0.9996592728883438,
+  "mean_inferred_benign_fraction": 0.33478191065264745
+}

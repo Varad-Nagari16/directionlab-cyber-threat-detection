@@ -1,0 +1,23 @@
+file,day,label,flows,total_flows_in_file,fraction_of_file
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,Friday,BENIGN,97718,225745,0.4328689450486168
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,Friday,DDoS,128027,225745,0.5671310549513832
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,Friday,BENIGN,127537,286467,0.4452066032038594
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,Friday,PortScan,158930,286467,0.5547933967961406
+Friday-WorkingHours-Morning.pcap_ISCX.csv,Friday,BENIGN,189067,191033,0.9897085843807091
+Friday-WorkingHours-Morning.pcap_ISCX.csv,Friday,Bot,1966,191033,0.010291415619290908
+Monday-WorkingHours.pcap_ISCX.csv,Monday,BENIGN,529918,529918,1.0
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,Thursday,BENIGN,288566,288602,0.9998752607397038
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,Thursday,Infiltration,36,288602,0.00012473926029618645
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Thursday,BENIGN,168186,170366,0.9872040195813718
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Thursday,Web Attack � Brute Force,1507,170366,0.008845661693060822
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Thursday,Web Attack � Sql Injection,21,170366,0.0001232640315555921
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Thursday,Web Attack � XSS,652,170366,0.003827054694011716
+Tuesday-WorkingHours.pcap_ISCX.csv,Tuesday,BENIGN,432074,445909,0.9689734901067258
+Tuesday-WorkingHours.pcap_ISCX.csv,Tuesday,FTP-Patator,7938,445909,0.01780183849171019
+Tuesday-WorkingHours.pcap_ISCX.csv,Tuesday,SSH-Patator,5897,445909,0.013224671401563996
+Wednesday-workingHours.pcap_ISCX.csv,Wednesday,BENIGN,440031,692703,0.6352376126565065
+Wednesday-workingHours.pcap_ISCX.csv,Wednesday,DoS GoldenEye,10293,692703,0.014859182073702583
+Wednesday-workingHours.pcap_ISCX.csv,Wednesday,DoS Hulk,231073,692703,0.33358163599695684
+Wednesday-workingHours.pcap_ISCX.csv,Wednesday,DoS Slowhttptest,5499,692703,0.007938467135265763
+Wednesday-workingHours.pcap_ISCX.csv,Wednesday,DoS slowloris,5796,692703,0.008367222316057531
+Wednesday-workingHours.pcap_ISCX.csv,Wednesday,Heartbleed,11,692703,1.5879821510806218e-05

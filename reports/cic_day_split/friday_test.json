@@ -1,0 +1,55 @@
+{
+  "threshold_from_thursday": 0.08523285745351863,
+  "metrics": {
+    "rows": 703245,
+    "threshold": 0.08523285745351863,
+    "accuracy": 0.766839437180499,
+    "attack_precision": 0.956843475335995,
+    "attack_recall": 0.4529095987512244,
+    "attack_f1": 0.614807802086539,
+    "fpr": 0.014244959234604969,
+    "tn": 408420,
+    "fp": 5902,
+    "fn": 158067,
+    "tp": 130856,
+    "roc_auc": 0.9207898543768522
+  },
+  "attack_breakdown": [
+    {
+      "attack_type": "BENIGN",
+      "flows": 414322,
+      "actual_attacks": 0,
+      "detected": 0,
+      "missed": 0,
+      "recall": null,
+      "false_alarms": 5902
+    },
+    {
+      "attack_type": "Bot",
+      "flows": 1966,
+      "actual_attacks": 1966,
+      "detected": 0,
+      "missed": 1966,
+      "recall": 0.0,
+      "false_alarms": 0
+    },
+    {
+      "attack_type": "DDoS",
+      "flows": 128027,
+      "actual_attacks": 128027,
+      "detected": 127922,
+      "missed": 105,
+      "recall": 0.9991798604981762,
+      "false_alarms": 0
+    },
+    {
+      "attack_type": "PortScan",
+      "flows": 158930,
+      "actual_attacks": 158930,
+      "detected": 2934,
+      "missed": 155996,
+      "recall": 0.018460957654313218,
+      "false_alarms": 0
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+heldout_capture,variant,label,rows,detected_as_attack,missed_as_attack,recall_or_fpr,metric_type
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,all_features,BENIGN,97718,18895,78823,0.19336253300313147,false_positive_rate
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,all_features,DDoS,128027,86848,41179,0.678356909089489,attack_recall
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,without_destination_port,BENIGN,97718,17900,79818,0.1831801715139483,false_positive_rate
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,without_destination_port,DDoS,128027,81439,46588,0.636108008466964,attack_recall
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,all_features,BENIGN,127537,2273,125264,0.017822279024910417,false_positive_rate
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,all_features,PortScan,158930,3183,155747,0.020027685144403198,attack_recall
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,without_destination_port,BENIGN,127537,2104,125433,0.016497173369296753,false_positive_rate
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,without_destination_port,PortScan,158930,913,158017,0.005744667463663248,attack_recall
+Friday-WorkingHours-Morning.pcap_ISCX.csv,all_features,BENIGN,189067,1906,187161,0.01008108236762629,false_positive_rate
+Friday-WorkingHours-Morning.pcap_ISCX.csv,all_features,Bot,1966,25,1941,0.01271617497456765,attack_recall
+Friday-WorkingHours-Morning.pcap_ISCX.csv,without_destination_port,BENIGN,189067,1637,187430,0.008658306314692676,false_positive_rate
+Friday-WorkingHours-Morning.pcap_ISCX.csv,without_destination_port,Bot,1966,2,1964,0.001017293997965412,attack_recall
+Monday-WorkingHours.pcap_ISCX.csv,all_features,BENIGN,529918,7773,522145,0.014668307172053035,false_positive_rate
+Monday-WorkingHours.pcap_ISCX.csv,without_destination_port,BENIGN,529918,7305,522613,0.013785151664974581,false_positive_rate
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,all_features,BENIGN,288566,67177,221389,0.23279596348842205,false_positive_rate
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,all_features,Infiltration,36,8,28,0.2222222222222222,attack_recall
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,without_destination_port,BENIGN,288566,67477,221089,0.2338355870060922,false_positive_rate
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,without_destination_port,Infiltration,36,6,30,0.16666666666666666,attack_recall
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,all_features,BENIGN,168186,2254,165932,0.013401828927496938,false_positive_rate
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,all_features,Web Attack � Brute Force,1507,1430,77,0.948905109489051,attack_recall
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,all_features,Web Attack � Sql Injection,21,19,2,0.9047619047619048,attack_recall
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,all_features,Web Attack � XSS,652,635,17,0.9739263803680982,attack_recall
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,without_destination_port,BENIGN,168186,1528,166658,0.009085179503644774,false_positive_rate
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,without_destination_port,Web Attack � Brute Force,1507,1273,234,0.8447246184472462,attack_recall
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,without_destination_port,Web Attack � Sql Injection,21,13,8,0.6190476190476191,attack_recall
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,without_destination_port,Web Attack � XSS,652,610,42,0.9355828220858896,attack_recall
+Tuesday-WorkingHours.pcap_ISCX.csv,all_features,BENIGN,432074,19406,412668,0.044913602762489756,false_positive_rate
+Tuesday-WorkingHours.pcap_ISCX.csv,all_features,FTP-Patator,7938,3956,3982,0.4983623078861174,attack_recall
+Tuesday-WorkingHours.pcap_ISCX.csv,all_features,SSH-Patator,5897,2854,3043,0.48397490249279296,attack_recall
+Tuesday-WorkingHours.pcap_ISCX.csv,without_destination_port,BENIGN,432074,17027,415047,0.03940760147567315,false_positive_rate
+Tuesday-WorkingHours.pcap_ISCX.csv,without_destination_port,FTP-Patator,7938,2466,5472,0.31065759637188206,attack_recall
+Tuesday-WorkingHours.pcap_ISCX.csv,without_destination_port,SSH-Patator,5897,1183,4714,0.20061047990503647,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,all_features,BENIGN,440031,5143,434888,0.011687812904090848,false_positive_rate
+Wednesday-workingHours.pcap_ISCX.csv,all_features,DoS GoldenEye,10293,8702,1591,0.8454289322840766,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,all_features,DoS Hulk,231073,183001,48072,0.7919618475546689,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,all_features,DoS Slowhttptest,5499,1800,3699,0.32733224222585927,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,all_features,DoS slowloris,5796,3681,2115,0.6350931677018633,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,all_features,Heartbleed,11,7,4,0.6363636363636364,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,without_destination_port,BENIGN,440031,5700,434331,0.012953632812233683,false_positive_rate
+Wednesday-workingHours.pcap_ISCX.csv,without_destination_port,DoS GoldenEye,10293,8532,1761,0.8289128533955115,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,without_destination_port,DoS Hulk,231073,159526,71547,0.6903705755324075,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,without_destination_port,DoS Slowhttptest,5499,1594,3905,0.28987088561556645,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,without_destination_port,DoS slowloris,5796,2968,2828,0.5120772946859904,attack_recall
+Wednesday-workingHours.pcap_ISCX.csv,without_destination_port,Heartbleed,11,7,4,0.6363636363636364,attack_recall

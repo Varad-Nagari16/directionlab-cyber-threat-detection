@@ -1,0 +1,4 @@
+attack_type,flows,actual_attacks,default_0.5_detected,default_0.5_missed,default_0.5_recall,default_0.5_false_alarms,calibrated_0.04_detected,calibrated_0.04_missed,calibrated_0.04_recall,calibrated_0.04_false_alarms
+FTP-Patator,7938,7938,0,7938,0.0,0,3952,3986,0.4978584026203074,0
+SSH-Patator,5897,5897,118,5779,0.02001017466508394,0,1991,3906,0.33762930303544175,0
+BENIGN,432074,0,0,0,,3616,0,0,,15965

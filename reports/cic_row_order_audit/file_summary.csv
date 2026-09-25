@@ -1,0 +1,9 @@
+file,rows,label_column,timestamp_column_found,distinct_labels,label_runs,longest_label_run,first_label,last_label,timestamp_parse_rate,first_valid_timestamp,last_valid_timestamp,timestamps_monotonic
+Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,225745, Label,False,2,45,28202,BENIGN,BENIGN,,,,
+Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,286467, Label,False,2,5007,34608,BENIGN,BENIGN,,,,
+Friday-WorkingHours-Morning.pcap_ISCX.csv,191033, Label,False,2,2861,31698,BENIGN,BENIGN,,,,
+Monday-WorkingHours.pcap_ISCX.csv,529918, Label,False,1,1,529918,BENIGN,BENIGN,,,,
+Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,288602, Label,False,2,73,66383,BENIGN,BENIGN,,,,
+Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,170366, Label,False,4,4143,77079,BENIGN,BENIGN,,,,
+Tuesday-WorkingHours.pcap_ISCX.csv,445909, Label,False,3,14687,91062,BENIGN,BENIGN,,,,
+Wednesday-workingHours.pcap_ISCX.csv,692703, Label,False,6,35272,102641,BENIGN,BENIGN,,,,

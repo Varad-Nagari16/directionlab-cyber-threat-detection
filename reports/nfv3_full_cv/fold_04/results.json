@@ -38,50 +38,50 @@
   "validation_rows_evaluated": 699781,
   "calibration_rows_evaluated": 699781,
   "test_rows_evaluated": 487850,
-  "device": "cpu",
+  "device": "cuda",
   "epochs": [
     {
       "epoch": 1,
-      "train_loss": 0.033986366136593955,
+      "train_loss": 0.033930520166097836,
       "validation": {
         "rows": 699781,
         "positive_rate": 0.05026715621352196,
-        "precision": 0.9998290841760433,
-        "recall": 0.9978110075051171,
-        "f1": 0.9988190264794183,
-        "mcc": 0.9987571517413903,
-        "average_precision": 0.9999909541368864,
-        "auroc": 0.9999995189096582,
+        "precision": 0.9998860398860399,
+        "recall": 0.9977257220832386,
+        "f1": 0.998804712846491,
+        "mcc": 0.9987421685224158,
+        "average_precision": 0.9999939260208759,
+        "auroc": 0.9999996778615307,
         "threshold": 0.5
       }
     },
     {
       "epoch": 2,
-      "train_loss": 0.0065130906990282685,
+      "train_loss": 0.006972501557316383,
       "validation": {
         "rows": 699781,
         "positive_rate": 0.05026715621352196,
-        "precision": 0.9988350948971474,
-        "recall": 0.9994030020468502,
-        "f1": 0.9991189677712726,
-        "mcc": 0.9990723675600172,
-        "average_precision": 0.9999968331183032,
-        "auroc": 0.999999832150929,
+        "precision": 0.9986363636363637,
+        "recall": 0.9993177166249716,
+        "f1": 0.9989769239513471,
+        "mcc": 0.9989228198672111,
+        "average_precision": 0.999988889763251,
+        "auroc": 0.9999993616687854,
         "threshold": 0.5
       }
     },
     {
       "epoch": 3,
-      "train_loss": 0.006312711727211439,
+      "train_loss": 0.004730467685113292,
       "validation": {
         "rows": 699781,
         "positive_rate": 0.05026715621352196,
-        "precision": 0.9974478221415608,
-        "recall": 0.999943143052081,
-        "f1": 0.9986939239068711,
-        "mcc": 0.9986255694737737,
-        "average_precision": 0.9999991690693264,
-        "auroc": 0.9999999559417576,
+        "precision": 0.9969949537903271,
+        "recall": 0.9997725722083238,
+        "f1": 0.9983818310858765,
+        "mcc": 0.9982971306876461,
+        "average_precision": 0.9999982073217574,
+        "auroc": 0.9999999049111914,
         "threshold": 0.5
       }
     }
@@ -89,15 +89,15 @@
   "test_metrics": {
     "rows": 487850,
     "positive_rate": 0.06932459026575089,
-    "precision": 0.831796158292137,
+    "precision": 0.8502614641995173,
     "recall": 1.0,
-    "f1": 0.9081754588541736,
-    "mcc": 0.9051336428880705,
-    "average_precision": 0.9995762486366607,
-    "auroc": 0.9999826846695601,
-    "threshold": 0.0008985825697891414
+    "f1": 0.9190716886787326,
+    "mcc": 0.9160282035936149,
+    "average_precision": 0.9994781346124668,
+    "auroc": 0.9999762168027697,
+    "threshold": 0.00024259639030788094
   },
-  "calibrated_threshold": 0.0008985825697891414,
+  "calibrated_threshold": 0.00024259639030788094,
   "target_fpr": 0.01,
   "threshold_calibration_metrics": {
     "rows": 699781,
@@ -106,9 +106,9 @@
     "recall": 1.0,
     "f1": 0.9136742035610852,
     "mcc": 0.9125000966231754,
-    "average_precision": 0.9999991690693264,
-    "auroc": 0.9999999559417576,
-    "threshold": 0.0008985825697891414
+    "average_precision": 0.9999982073217574,
+    "auroc": 0.9999999049111914,
+    "threshold": 0.00024259639030788094
   },
   "directionality_caveat": "The source NetFlow v3 archive contains both-direction fields. This experiment excludes reverse-direction fields before modeling but is direction-masked rather than proof of physical one-way collection."
 }

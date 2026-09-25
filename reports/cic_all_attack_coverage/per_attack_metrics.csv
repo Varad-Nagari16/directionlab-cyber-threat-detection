@@ -1,0 +1,16 @@
+label,rows,detected_as_attack,missed_as_attack,recall_or_fpr
+BENIGN,454619,4515,450104,0.009931393100596323
+Bot,393,389,4,0.989821882951654
+DDoS,25605,25601,4,0.9998437805116188
+DoS GoldenEye,2059,2059,0,1.0
+DoS Hulk,46215,46215,0,1.0
+DoS Slowhttptest,1100,1100,0,1.0
+DoS slowloris,1159,1158,1,0.999137187230371
+FTP-Patator,1588,1588,0,1.0
+Heartbleed,2,2,0,1.0
+Infiltration,7,5,2,0.7142857142857143
+PortScan,31786,31785,1,0.9999685396086327
+SSH-Patator,1179,1179,0,1.0
+Web Attack � Brute Force,301,301,0,1.0
+Web Attack � Sql Injection,4,4,0,1.0
+Web Attack � XSS,130,130,0,1.0

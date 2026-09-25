@@ -1,0 +1,20 @@
+day,label,flows
+Friday,BENIGN,414322
+Friday,Bot,1966
+Friday,DDoS,128027
+Friday,PortScan,158930
+Monday,BENIGN,529918
+Thursday,BENIGN,456752
+Thursday,Infiltration,36
+Thursday,Web Attack � Brute Force,1507
+Thursday,Web Attack � Sql Injection,21
+Thursday,Web Attack � XSS,652
+Tuesday,BENIGN,432074
+Tuesday,FTP-Patator,7938
+Tuesday,SSH-Patator,5897
+Wednesday,BENIGN,440031
+Wednesday,DoS GoldenEye,10293
+Wednesday,DoS Hulk,231073
+Wednesday,DoS Slowhttptest,5499
+Wednesday,DoS slowloris,5796
+Wednesday,Heartbleed,11

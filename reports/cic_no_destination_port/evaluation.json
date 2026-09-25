@@ -1,0 +1,41 @@
+{
+  "experiment": "CIC-IDS2017 within-capture all-attack coverage without Destination Port",
+  "warning": "Random stratified rows within each capture. Related flows may cross splits; this is not independent-capture generalization.",
+  "seed": 42,
+  "training_cap_per_label_per_file": 50000,
+  "feature_count": 76,
+  "train_rows": 573772,
+  "validation_rows": 566147,
+  "test_rows": 566147,
+  "target_validation_fpr": 0.01,
+  "selected_threshold": 0.11234536793523603,
+  "validation_metrics_at_threshold": {
+    "rows": 566147,
+    "threshold": 0.11234536793523603,
+    "accuracy": 0.9919296578450473,
+    "attack_precision": 0.9608355091383812,
+    "attack_recall": 0.9997848074026253,
+    "attack_f1": 0.9799232787144571,
+    "roc_auc": 0.9999191788576515,
+    "fpr": 0.009997382423523873,
+    "tn": 450074,
+    "fp": 4545,
+    "fn": 24,
+    "tp": 111504
+  },
+  "test_metrics": {
+    "rows": 566147,
+    "threshold": 0.11234536793523603,
+    "accuracy": 0.9921857750725518,
+    "attack_precision": 0.9621093143261481,
+    "attack_recall": 0.9997041101786098,
+    "attack_f1": 0.980546492300386,
+    "roc_auc": 0.9998964341534824,
+    "fpr": 0.009658637232495782,
+    "tn": 450228,
+    "fp": 4391,
+    "fn": 33,
+    "tp": 111495
+  },
+  "model_path": "F:\\Side_Projects\\new\\directionlab-cyber-threat-detection\\reports\\cic_no_destination_port\\model.joblib"
+}
