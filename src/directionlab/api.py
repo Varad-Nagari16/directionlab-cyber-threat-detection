@@ -46,7 +46,7 @@ FRONTEND_FILE = (
     / "index.html"
 )
 
-MAX_UPLOAD_BYTES = 100 * 1024 * 1024  # 100 MB
+MAX_UPLOAD_BYTES = 1024 * 1024 * 1024  # 100 MB
 
 
 # Temporary directory for uploaded files and predictions.

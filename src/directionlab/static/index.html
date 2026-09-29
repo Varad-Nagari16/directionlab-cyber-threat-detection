@@ -1,266 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DirectionLab | Threat Detection</title>
+  <meta name="theme-color" content="#0b1220" />
+  <title>DirectionLab | Universal Model</title>
 
   <style>
     :root {
-      --bg: #0b1020;
-      --panel: #121a2d;
-      --border: #26334c;
-      --text: #eef3ff;
-      --muted: #9aa9c2;
-      --blue: #6d8cff;
-      --green: #36d399;
-      --red: #ff6b81;
+      --bg: #080d18;
+      --bg-soft: #0d1524;
+      --surface: rgba(18, 28, 46, 0.88);
+      --surface-strong: #121d30;
+      --surface-raised: #17243a;
+      --border: rgba(145, 167, 202, 0.16);
+      --border-strong: rgba(125, 151, 194, 0.3);
+      --text: #f4f7fc;
+      --muted: #94a5bd;
+      --muted-strong: #b8c5d8;
+      --primary: #7192ff;
+      --primary-dark: #526fe0;
+      --cyan: #55d7e9;
+      --green: #42d49a;
+      --red: #ff7086;
+      --amber: #f6c85f;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
+      min-width: 320px;
       min-height: 100vh;
-      background: radial-gradient(ellipse at top, #172442, var(--bg) 65%);
       color: var(--text);
-      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(74, 103, 206, 0.2), transparent 34rem),
+        radial-gradient(circle at 92% 10%, rgba(56, 181, 201, 0.09), transparent 28rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
     }
 
-    .container {
-      width: min(1000px, 92%);
+    button, input { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 48px 0;
+      padding: 28px 0 42px;
     }
 
-    header {
-      margin-bottom: 32px;
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 58px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(126, 157, 255, 0.45);
+      border-radius: 12px;
+      color: #fff;
+      background: linear-gradient(145deg, #6f91ff, #405dc4);
+      box-shadow: 0 8px 22px rgba(78, 105, 224, 0.3);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .brand-name { font-weight: 800; letter-spacing: -0.3px; }
+    .brand-subtitle { color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+    .system-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted-strong);
+      background: rgba(18, 28, 46, 0.58);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(66, 212, 154, 0.12);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      align-items: end;
+      gap: 46px;
+      margin-bottom: 34px;
     }
 
     .eyebrow {
-      color: var(--blue);
-      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: var(--cyan);
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 1.9px;
       text-transform: uppercase;
     }
 
-    h1 {
-      margin: 10px 0;
-      font-size: clamp(30px, 5vw, 46px);
-      letter-spacing: -1.5px;
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--cyan);
     }
 
-    .subtitle {
+    h1 {
+      max-width: 710px;
+      margin: 0;
+      font-size: clamp(36px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 20px 0 0;
       color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .hero-note {
+      padding: 18px 20px;
+      border-left: 2px solid var(--primary);
+      border-radius: 0 14px 14px 0;
+      color: var(--muted-strong);
+      background: linear-gradient(90deg, rgba(113, 146, 255, 0.12), transparent);
+      font-size: 13px;
       line-height: 1.6;
     }
 
+    .hero-note strong { display: block; margin-bottom: 4px; color: var(--text); }
+
     .panel {
-      background: rgba(18, 26, 45, 0.94);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
-      margin-bottom: 22px;
-      box-shadow: 0 18px 60px #00000020;
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
     }
 
-    h2 {
-      margin: 0 0 8px;
-      font-size: 19px;
+    .upload-panel { overflow: hidden; }
+
+    .panel-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 25px 28px 20px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hint {
+    h2 { margin: 0; font-size: 18px; letter-spacing: -0.3px; }
+
+    .section-copy {
+      margin: 7px 0 0;
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: 13px;
+      line-height: 1.55;
     }
 
-    .upload-area {
-      border: 1px dashed #435577;
-      border-radius: 12px;
-      padding: 28px;
-      margin-top: 20px;
+    .schema-pill {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border: 1px solid rgba(85, 215, 233, 0.24);
+      border-radius: 999px;
+      color: var(--cyan);
+      background: rgba(85, 215, 233, 0.07);
+      font-size: 11px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .upload-content { padding: 28px; }
+
+    .drop-zone {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 218px;
+      padding: 30px 22px;
+      border: 1px dashed rgba(126, 157, 255, 0.46);
+      border-radius: 16px;
       text-align: center;
-      background: #0c1426;
+      background:
+        linear-gradient(rgba(113, 146, 255, 0.035), rgba(113, 146, 255, 0.035)),
+        repeating-linear-gradient(135deg, transparent 0 10px, rgba(255, 255, 255, 0.012) 10px 11px),
+        var(--bg-soft);
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
     }
 
-    input[type="file"] {
-      display: block;
-      width: 100%;
-      max-width: 420px;
-      margin: 18px auto;
-      color: var(--muted);
+    .drop-zone.dragover {
+      border-color: var(--cyan);
+      background-color: rgba(85, 215, 233, 0.09);
+      transform: translateY(-2px);
     }
 
-    button,
-    .download {
+    .file-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(113, 146, 255, 0.32);
+      border-radius: 15px;
+      color: var(--primary);
+      background: rgba(113, 146, 255, 0.12);
+      font-size: 22px;
+    }
+
+    .drop-title { margin: 0; font-size: 16px; font-weight: 750; }
+    .drop-help { margin: 7px 0 18px; color: var(--muted); font-size: 13px; }
+
+    .file-input { display: none; }
+
+    .choose-button, .analyze-button, .download-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       border: 0;
       border-radius: 10px;
-      padding: 12px 20px;
-      font-weight: 700;
-      font-size: 14px;
       cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
       text-decoration: none;
-      display: inline-block;
+      transition: transform 160ms ease, background 160ms ease, opacity 160ms ease;
     }
 
-    button {
+    .choose-button {
+      padding: 10px 15px;
+      color: #eef2ff;
+      background: rgba(113, 146, 255, 0.2);
+      border: 1px solid rgba(113, 146, 255, 0.36);
+    }
+
+    .choose-button:hover, .analyze-button:hover, .download-button:hover { transform: translateY(-1px); }
+    .choose-button:hover { background: rgba(113, 146, 255, 0.3); }
+
+    .selected-file {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      max-width: 620px;
+      margin: 18px auto 0;
+      padding: 11px 13px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted-strong);
+      background: rgba(255, 255, 255, 0.035);
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .selected-file.visible { display: flex; }
+    .selected-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .selected-size { flex: 0 0 auto; color: var(--muted); }
+
+    .action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .upload-limit { color: var(--muted); font-size: 12px; }
+
+    .analyze-button {
+      min-width: 148px;
+      padding: 12px 18px;
       color: #fff;
-      background: var(--blue);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 8px 20px rgba(82, 111, 224, 0.25);
     }
 
-    button:disabled {
-      opacity: 0.55;
-      cursor: wait;
-    }
-
-    .download {
-      color: #061a14;
-      background: var(--green);
-      margin-top: 18px;
-    }
+    .analyze-button:disabled { opacity: 0.55; cursor: wait; transform: none; }
 
     .status {
-      margin-top: 16px;
-      font-size: 14px;
+      min-height: 20px;
+      margin: 16px 0 0;
       color: var(--muted);
-      overflow-wrap: anywhere;
+      font-size: 13px;
+      line-height: 1.5;
       white-space: pre-line;
+      overflow-wrap: anywhere;
     }
 
-    .status.error {
-      color: var(--red);
+    .status.success { color: var(--green); }
+    .status.error { color: var(--red); }
+    .status.working { color: var(--amber); }
+    .hidden { display: none !important; }
+
+    .results-panel { margin-top: 22px; padding: 28px; }
+
+    .results-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
     }
 
-    .status.success {
+    .result-meta {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+
+    .result-badge {
+      padding: 7px 10px;
+      border: 1px solid rgba(66, 212, 154, 0.28);
+      border-radius: 999px;
       color: var(--green);
-    }
-
-    .hidden {
-      display: none;
+      background: rgba(66, 212, 154, 0.08);
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .metrics {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 22px;
+      gap: 12px;
     }
 
     .metric {
-      background: #0c1426;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px;
       min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface-strong);
     }
 
     .metric-label {
+      margin-bottom: 11px;
       color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      text-transform: uppercase;
     }
 
     .metric-value {
-      font-size: clamp(21px, 3vw, 30px);
-      font-weight: 800;
       overflow-wrap: anywhere;
+      color: var(--text);
+      font-size: clamp(23px, 3vw, 32px);
+      font-weight: 850;
+      letter-spacing: -1px;
     }
 
-    .attack {
-      color: var(--red);
-    }
+    .metric-value.attack { color: var(--red); }
+    .metric-value.benign { color: var(--green); }
 
-    .benign {
-      color: var(--green);
-    }
+    .distribution { margin-top: 22px; }
+    .distribution-head { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 12px; }
+    .distribution-track { height: 10px; margin-top: 9px; overflow: hidden; border-radius: 999px; background: #202d43; }
+    .distribution-fill { width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--red), #ff9a8b); transition: width 500ms ease; }
 
-    .bar {
-      height: 10px;
-      background: #26334c;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-top: 22px;
-    }
+    .result-actions { display: flex; align-items: center; gap: 12px; margin-top: 23px; }
 
-    .bar-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--red);
-      transition: width 0.4s ease;
+    .download-button {
+      padding: 11px 16px;
+      color: #071b16;
+      background: var(--green);
     }
 
     .result-note {
+      margin: 18px 0 0;
+      padding: 13px 15px;
+      border-left: 2px solid var(--amber);
+      border-radius: 0 10px 10px 0;
       color: var(--muted);
-      font-size: 13px;
+      background: rgba(246, 200, 95, 0.06);
+      font-size: 12px;
       line-height: 1.6;
-      margin-top: 16px;
     }
 
     footer {
-      text-align: center;
-      color: #71809a;
-      font-size: 12px;
-      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 2px 0;
+      color: #687991;
+      font-size: 11px;
     }
 
-    @media (max-width: 700px) {
-      .container {
-        padding: 28px 0;
-      }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; gap: 22px; }
+      .hero-note { max-width: 560px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
 
-      .panel {
-        padding: 20px;
-      }
-
-      .metrics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .upload-area {
-        padding: 20px 12px;
-      }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 26px, 1180px); padding-top: 18px; }
+      .topbar { margin-bottom: 42px; }
+      .system-status { padding: 8px 10px; font-size: 11px; }
+      .system-status span:last-child { display: none; }
+      h1 { letter-spacing: -2px; }
+      .panel-heading, .upload-content, .results-panel { padding: 20px; }
+      .panel-heading, .results-top { flex-direction: column; }
+      .schema-pill, .result-badge { align-self: flex-start; }
+      .action-row, footer { align-items: stretch; flex-direction: column; }
+      .analyze-button { width: 100%; }
+      .metrics { gap: 9px; }
+      .metric { padding: 14px; }
+      .metric-value { font-size: 22px; }
+      footer { text-align: center; }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <header>
-      <div class="eyebrow">DirectionLab · Research Prototype</div>
-      <h1>Cyber Threat Detection</h1>
-      <p class="subtitle">
-        Analyze unidirectional IP flow features with your trained
-        AI model. Upload a CSV to generate flow-level predictions.
-      </p>
-    </header>
+  <main class="shell">
+    <nav class="topbar" aria-label="Application header">
+      <a class="brand" href="/app">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>
+          <span class="brand-name">DirectionLab</span>
+          <span class="brand-subtitle">Universal network threat detection</span>
+        </span>
+      </a>
+      <div class="system-status" title="The local inference API is available">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Local inference ready</span>
+      </div>
+    </nav>
 
-    <section class="panel">
-      <h2>Analyze network traffic</h2>
-      <p class="hint">
-        Select a CSV containing the model's expected 29 input features.
-        The API currently accepts files up to 100 MB.
-      </p>
-
-      <form id="upload-form">
-        <div class="upload-area">
-          <div aria-hidden="true">📄</div>
-          <input id="csv-file" type="file" accept=".csv,text/csv" required />
-          <button id="analyze-btn" type="submit">Analyze CSV</button>
-          <div id="status" class="status" role="status">
-            Waiting for a CSV file.
-          </div>
-        </div>
-      </form>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">DirectionLab Universal Model</div>
+        <h1>One intelligent model for your network traffic.</h1>
+        <p class="hero-copy">
+          Upload compatible network-flow data and generate flow-level threat
+          predictions with the DirectionLab Universal Model.
+        </p>
+      </div>
+      <aside class="hero-note">
+        <strong>Universal model analysis</strong>
+        The model is designed to work across supported flow-data schemas while
+        preserving the available traffic direction and temporal context.
+      </aside>
     </section>
 
-    <section id="results" class="panel hidden" aria-live="polite">
-      <h2>Analysis results</h2>
-      <p id="result-file" class="hint"></p>
+    <section class="panel upload-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Analyze a dataset</h2>
+          <p class="section-copy">Select a supported network-flow CSV to begin inference.</p>
+        </div>
+        <span class="schema-pill">Universal model · adaptive schema</span>
+      </div>
+
+      <div class="upload-content">
+        <form id="upload-form">
+          <div id="drop-zone" class="drop-zone">
+            <div class="file-icon" aria-hidden="true">↥</div>
+            <p class="drop-title">Drop your CSV here</p>
+            <p class="drop-help">or choose network-flow data from your computer</p>
+            <label class="choose-button" for="csv-file">Choose CSV file</label>
+            <input id="csv-file" class="file-input" type="file" accept=".csv,text/csv" required />
+            <div id="selected-file" class="selected-file" aria-live="polite">
+              <span id="selected-name" class="selected-name"></span>
+              <span id="selected-size" class="selected-size"></span>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <span class="upload-limit">CSV only · supported flow schemas</span>
+            <button id="analyze-btn" class="analyze-button" type="submit">Run analysis <span aria-hidden="true">→</span></button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite">Waiting for a CSV file.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="results" class="panel results-panel hidden" aria-live="polite">
+      <div class="results-top">
+        <div>
+          <h2>Analysis complete</h2>
+          <p id="result-file" class="result-meta"></p>
+        </div>
+        <span class="result-badge">Prediction generated</span>
+      </div>
 
       <div class="metrics">
         <div class="metric">
@@ -281,40 +538,98 @@
         </div>
       </div>
 
-      <div class="bar" aria-label="Proportion of flows predicted as attacks">
-        <div id="bar-fill" class="bar-fill"></div>
+      <div class="distribution">
+        <div class="distribution-head">
+          <span>Predicted traffic distribution</span>
+          <span id="distribution-label">0% attack</span>
+        </div>
+        <div class="distribution-track" aria-label="Proportion of flows predicted as attacks">
+          <div id="bar-fill" class="distribution-fill"></div>
+        </div>
       </div>
 
-      <a id="download" class="download" href="#" download>
-        Download predictions CSV
-      </a>
+      <div class="result-actions">
+        <a id="download" class="download-button" href="#" download>Download predictions <span aria-hidden="true">↓</span></a>
+      </div>
 
       <p class="result-note">
-        These are model predictions, not confirmed incidents.
-        Detection accuracy cannot be determined without ground-truth labels.
+        Use these results as a research signal. A prediction is not proof of an
+        attack, and production alerting requires validation and threshold calibration.
       </p>
     </section>
 
     <footer>
-      DirectionLab · AI-based network flow threat detection
+        <span>DirectionLab · Universal AI network threat detection</span>
+      <span>Local research interface</span>
     </footer>
   </main>
 
   <script>
     const form = document.getElementById("upload-form");
     const fileInput = document.getElementById("csv-file");
+    const dropZone = document.getElementById("drop-zone");
+    const selectedFile = document.getElementById("selected-file");
+    const selectedName = document.getElementById("selected-name");
+    const selectedSize = document.getElementById("selected-size");
     const button = document.getElementById("analyze-btn");
     const statusBox = document.getElementById("status");
     const results = document.getElementById("results");
+
+    function formatBytes(bytes) {
+      if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+      return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    }
 
     function setStatus(message, type = "") {
       statusBox.textContent = message;
       statusBox.className = `status ${type}`;
     }
 
+    function showSelectedFile(file) {
+      if (!file) {
+        selectedFile.classList.remove("visible");
+        return;
+      }
+      selectedName.textContent = file.name;
+      selectedSize.textContent = formatBytes(file.size);
+      selectedFile.classList.add("visible");
+    }
+
+    function useFile(file) {
+      if (!file) return;
+      if (!file.name.toLowerCase().endsWith(".csv")) {
+        setStatus("Please select a .csv file.", "error");
+        return;
+      }
+      const transfer = new DataTransfer();
+      transfer.items.add(file);
+      fileInput.files = transfer.files;
+      showSelectedFile(file);
+      setStatus("CSV selected. Ready to run analysis.");
+    }
+
+    fileInput.addEventListener("change", () => useFile(fileInput.files[0]));
+
+    ["dragenter", "dragover"].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.add("dragover");
+      });
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      dropZone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropZone.classList.remove("dragover");
+      });
+    });
+
+    dropZone.addEventListener("drop", (event) => {
+      useFile(event.dataTransfer.files[0]);
+    });
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-
       const file = fileInput.files[0];
 
       if (!file) {
@@ -329,68 +644,47 @@
 
       const formData = new FormData();
       formData.append("file", file);
-
       button.disabled = true;
-      button.textContent = "Analyzing…";
+      button.innerHTML = "Analyzing…";
       results.classList.add("hidden");
-      setStatus("Uploading file and running the model. Please wait.");
+      setStatus("Uploading the dataset and running the model. This may take a few minutes for a large CSV.", "working");
 
       try {
-        const response = await fetch("/predict", {
-          method: "POST",
-          body: formData
-        });
-
-        // Read the response body only once.
+        const response = await fetch("/predict", { method: "POST", body: formData });
         const data = await response.json();
 
         if (!response.ok) {
           const detail = data.detail;
-
           let message;
-
           if (typeof detail === "string") {
             message = detail;
           } else if (detail && typeof detail === "object") {
             message = [
               detail.message || "Analysis failed.",
-              detail.detected_dataset
-                ? `Detected dataset: ${detail.detected_dataset}`
-                : null,
+              detail.detected_dataset ? `Detected dataset: ${detail.detected_dataset}` : null,
               detail.next_step || null,
-            ]
-              .filter(Boolean)
-              .join("\n\n");
+            ].filter(Boolean).join("\n\n");
           } else {
             message = "Analysis failed. Please check your CSV file.";
           }
-
           throw new Error(message);
         }
 
         const summary = data.summary;
-        const total = Number(summary.prediction_rows);
-        const attacks = Number(summary.attack_predictions);
-        const benign = Number(summary.benign_predictions);
-        const rate = Number(summary.attack_rate) * 100;
+        const total = Number(summary.prediction_rows ?? summary.rows_scored ?? 0);
+        const attacks = Number(summary.attack_predictions ?? summary.anomalies_flagged ?? 0);
+        const benign = Number(summary.benign_predictions ?? Math.max(0, total - attacks));
+        const rate = total ? (attacks / total) * 100 : 0;
 
-        document.getElementById("total").textContent =
-          total.toLocaleString();
+        document.getElementById("total").textContent = total.toLocaleString();
+        document.getElementById("attacks").textContent = attacks.toLocaleString();
+        document.getElementById("benign").textContent = benign.toLocaleString();
+        document.getElementById("rate").textContent = `${rate.toFixed(2)}%`;
+        document.getElementById("bar-fill").style.width = `${Math.max(0, Math.min(100, rate))}%`;
+        document.getElementById("distribution-label").textContent = `${rate.toFixed(2)}% attack`;
 
-        document.getElementById("attacks").textContent =
-          attacks.toLocaleString();
-
-        document.getElementById("benign").textContent =
-          benign.toLocaleString();
-
-        document.getElementById("rate").textContent =
-          `${rate.toFixed(2)}%`;
-
-        document.getElementById("bar-fill").style.width =
-          `${Math.max(0, Math.min(100, rate))}%`;
-
-        document.getElementById("result-file").textContent =
-          `File: ${file.name} · Threshold: ${summary.threshold}`;
+        const threshold = summary.threshold == null ? "not applicable" : summary.threshold;
+        document.getElementById("result-file").textContent = `File: ${file.name} · Threshold: ${threshold}`;
 
         const download = document.getElementById("download");
         download.href = data.download_url;
@@ -398,15 +692,14 @@
 
         results.classList.remove("hidden");
         setStatus("Analysis completed successfully.", "success");
-
+        results.scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (error) {
         setStatus(error.message || "Something went wrong.", "error");
       } finally {
         button.disabled = false;
-        button.textContent = "Analyze CSV";
+        button.innerHTML = "Run analysis <span aria-hidden=\"true\">→</span>";
       }
     });
   </script>
 </body>
-
 </html>
